@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "StripLinx",
+  "version": "1.0.0",
+  "description": "Cuts the tracking part off X post links when the site copies them to the clipboard.",
+  "minimum_chrome_version": "111",
+  "content_scripts": [
+    {
+      "matches": ["https://*.x.com/*", "https://*.twitter.com/*"],
+      "js": ["hook.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    }
+  ]
+}
